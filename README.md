@@ -16,8 +16,7 @@
 - bcrypt
 - connect-flash
 - slugify
-- Connect-Flash
-- Nodemailer
+
 
 ---
 
