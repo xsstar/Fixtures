@@ -13,16 +13,18 @@ const app = express();
 
 //Connect DB
 mongoose
-  .connect('mongodb://localhost/fixtures-db', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false,
-    useCreateIndex: true,
+  .connect('mongodb+srv://dbUser:cwZTNT25YQVPUGIz@cluster0.njmbf.mongodb.net/fixtures-db?retryWrites=true&w=majority',
+  {
+    serverSelectionTimeoutMS: 5000,
   })
-  .then(() => {
-    console.log('DB Connected Successfully');
-  });
 
+  .then(() => {
+    
+    console.log('DB Connected Successfully');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 //Template Engine
 app.set('view engine', 'ejs');
 
@@ -39,7 +41,11 @@ app.use(
     secret: 'my_keyboard_cat',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb://localhost/fixtures-db' }),
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://dbUser:cwZTNT25YQVPUGIz@cluster0.njmbf.mongodb.net/fixtures-db?retryWrites=true&w=majority',
+    
+    serverSelectionTimeoutMS: 5000
+    
+  }),
   })
 );
 app.use(flash());
@@ -63,7 +69,8 @@ app.use('/furnitures', furnitureRoute);
 app.use('/categories', categoryRoute);
 app.use('/users', userRoute);
 
-const port = 3000;
+const port = process.env.PORT || 5000;
+
 
 app.listen(port, () => {
   console.log(`App started on port ${port} `);
