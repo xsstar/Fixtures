@@ -57,15 +57,15 @@ exports.getIndexPage = async (req, res) => {
       secure: true, // true for 465, false for other ports
       auth: {
         user: "havvaarslann@gmail.com", // gmail account
-        pass: "vjahyatljtpmxwnm1111", // gmail password
+        pass: "zqlzttsxiqzwdggz", // gmail password
       },
     });
   
     // send mail with defined transport object
     let info = await transporter.sendMail({
-      from: '"Smart EDU Contact Form" <havvaarslann@gmail.com>', // sender address
+      from: '"Furniture Contact Form" <havvaarslann@gmail.com>', // sender address
       to: "eminmertpolatli@gmail.com", // list of receivers
-      subject: "Smart EDU Contact Form New Message ✔", // Subject line
+      subject: "Furniture Contact Form New Message ✔", // Subject line
       html: outputMessage, // html body
     });
   

@@ -1,9 +1,9 @@
 
 # PatikaDev 
-## Node.js Backend Patikası Projeleri-Misfit 
+## Node.js Backend Patikası Projeleri-Fixtures
 ---
 
-# Misfit  
+# Fixtures
 
 
 ### Using Technologies:
@@ -15,7 +15,7 @@
 - nodemailer
 - bcrypt
 - connect-flash
-- slugif
+- slugify
 - Connect-Flash
 - Nodemailer
 
@@ -29,4 +29,4 @@
 ---
 
 ### Heroku:
-
+https://myfurnitureapp.herokuapp.com/
