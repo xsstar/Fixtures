@@ -13,7 +13,7 @@ const app = express();
 
 //Connect DB
 mongoose
-  .connect('mongodb+srv://dbUser:cwZTNT25YQVPUGIz@cluster0.njmbf.mongodb.net/fixtures-db?retryWrites=true&w=majority',
+  .connect('mongodb+srv://dbUser:U74wQAzPCMHziYbO@cluster0.fpuyj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   {
     serverSelectionTimeoutMS: 5000,
   })
@@ -41,7 +41,7 @@ app.use(
     secret: 'my_keyboard_cat',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({ mongoUrl: 'mongodb+srv://dbUser:cwZTNT25YQVPUGIz@cluster0.njmbf.mongodb.net/fixtures-db?retryWrites=true&w=majority',
+    store: MongoStore.create({ mongoUrl: 'mongodb+srv://dbUser:U74wQAzPCMHziYbO@cluster0.fpuyj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
     
     serverSelectionTimeoutMS: 5000
     
