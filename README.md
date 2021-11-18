@@ -28,4 +28,4 @@
 ---
 
 ### Heroku:
-https://myfixturesapp.herokuapp.com/
+https://myfurnituresapp.herokuapp.com/
